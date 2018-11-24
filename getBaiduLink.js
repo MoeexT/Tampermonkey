@@ -18,7 +18,7 @@
     'use strict';
     var content = $("meta[content*='链接']")[0].getAttribute('content');
 
-    var bdLinkReg = new RegExp('(https|http)://pan.baidu.com/s/[\\w]+');
+    var bdLinkReg = new RegExp('(https|http)://pan.baidu.com/s/[-|\\w]+');
     var passwordReg = new RegExp(" [\\w]{4} ");
 
     var bdLink = content.match(bdLinkReg)[0];
