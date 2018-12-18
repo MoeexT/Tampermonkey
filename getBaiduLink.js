@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         贵族学院链接获取者
 // @namespace    http://tampermonkey.net/
-// @version      0.35
+// @version      0.37
 // @description  自动获取百度云链接
 // @author       鱼丸粗面666
 // @match        *://adb123.com/*
@@ -17,7 +17,7 @@
     'use strict';
     var content = $("meta[content*='链接']")[0].getAttribute('content');
 
-    var bdLinkReg = new RegExp('(https|http)://pan.baidu.com/s/[_|-|\\w]+');
+    var bdLinkReg = new RegExp('(https|http)://pan.baidu.com/s/.+');
     var passwordReg = new RegExp(" [\\w]{4} ");
 
     var bdLink = content.match(bdLinkReg)[0];
